@@ -14,6 +14,28 @@
 
   --pink-50: #fff0f6;
   --pink-700: #bd3770;
+
+  /* spacing — 4px grid */
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-3-5: 14px;
+  --space-4: 16px;
+  --space-8: 32px;
+  --space-11-5: 46px;
+
+  /* type */
+  --text-2xs: 7px;
+  --text-sm: 12px;
+  --text-md: 14px;
+  --text-xl: 32px;
+
+  --leading-none: 1;
+  --leading-normal: 1.5;
+  --leading-sm: 18px;
+  --leading-md: 21px;
 }
 
 /* --- Layer 2: semantic — what each value is for --- */
@@ -72,10 +94,10 @@ main {
 
 .lessons {
   display: flex;
-  gap: 46px;
+  gap: var(--space-11-5);
   flex-wrap: wrap;
   justify-content: center;
-  padding: 32px;
+  padding: var(--space-8);
 }
 
 /* ============================================
@@ -90,7 +112,7 @@ main {
   box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: var(--space-3-5);
   transition: box-shadow 200ms ease;
 }
 
@@ -125,15 +147,15 @@ main {
   top: 28px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--space-0-5);
 }
 
 .cover-word {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 32px;
+  font-size: var(--text-xl);
   letter-spacing: -1px;
-  line-height: 1;
+  line-height: var(--leading-none);
   color: #ffffff;
 }
 
@@ -146,7 +168,7 @@ main {
 
 .cover-bars {
   display: flex;
-  gap: 2px;
+  gap: var(--space-0-5);
   align-items: center;
 }
 
@@ -179,8 +201,8 @@ main {
   background: #1e293b;
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 0 8px;
+  gap: var(--space-1);
+  padding: 0 var(--space-2);
 }
 
 .dot {
@@ -193,10 +215,10 @@ main {
 .dot-green  { background: #34d399; }
 
 .code-window-body {
-  padding: 6px 8px;
+  padding: var(--space-1-5) var(--space-2);
   font-family: var(--font-code);
-  font-size: 7px;
-  line-height: 1.5;
+  font-size: var(--text-2xs);
+  line-height: var(--leading-normal);
   color: #e2e8f0;
   white-space: pre;
 }
@@ -218,7 +240,7 @@ main {
   bottom: 6px;
   font-family: var(--font-code);
   font-weight: 700;
-  font-size: 14px;
+  font-size: var(--text-md);
   color: rgba(255, 255, 255, 0.13);
 }
 
@@ -237,7 +259,7 @@ main {
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-4);
   width: 100%;
   flex: 1;
 }
@@ -246,21 +268,21 @@ main {
 .card-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 0 4px;
+  gap: var(--space-1);
+  padding: 0 var(--space-1);
 }
 
 .card-title {
-  font-size: 14px;
+  font-size: var(--text-md);
   font-weight: 700;
-  line-height: 21px;
+  line-height: var(--leading-md);
   color: var(--text-primary);
 }
 
 .card-description {
-  font-size: 12px;
+  font-size: var(--text-sm);
   font-weight: 400;
-  line-height: 18px;
+  line-height: var(--leading-sm);
   color: var(--text-secondary);
 }
 
@@ -275,19 +297,19 @@ main {
 .chip {
   background-color: var(--accent-info-pink);
   color: var(--text-on-pink);
-  font-size: 12px;
-  line-height: 18px;
-  padding: 4px 8px;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  padding: var(--space-1) var(--space-2);
   border-radius: 8px;
 }
 
 /* --- action --- */
 .button {
   width: 100%;
-  padding: 8px 12px;
+  padding: var(--space-2) var(--space-3);
   font-family: var(--font-ui);
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
   color: var(--bg-primary);
   background-color: var(--text-primary);
   border: 1px solid var(--text-primary);
@@ -304,13 +326,13 @@ main {
 }
 
 .price {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
   color: var(--text-tertiary);
 }
 
 .due-date {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
   color: var(--text-tertiary);
 }
