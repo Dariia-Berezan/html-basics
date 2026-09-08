@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Chip from "./Chip.jsx";
 
 /* Code snippets are stored as token data rather than inline JSX: JSX strips the
    indentation from multi-line text, which would flatten the `white-space: pre`
@@ -128,7 +129,7 @@ export default function LessonCard({
           <p className="card-description">{description}</p>
         </div>
         <div className="card-meta">
-          <span className="chip">{chip}</span>
+          <Chip label={chip} />
           <span className="price">{price}</span>
           {/* Template literal keeps this a single text node, matching the original
               markup exactly — `Due Date: {dueDate}` would emit two adjacent nodes,
