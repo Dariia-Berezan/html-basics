@@ -8,12 +8,16 @@
   --gray-50: #fafafa;
   --gray-100: #f5f5f5;
   --gray-500: #a4a2a2;
+  --gray-600: #8a8a8a;
   --gray-700: #575757;
   --gray-800: #3d3d3d;
+  --gray-850: #2b2b2b;
   --gray-900: #1a1a1a;
 
   --pink-50: #fff0f6;
+  --pink-300: #ff92bb;
   --pink-700: #bd3770;
+  --pink-950: #3a1f2c;
 
   /* spacing — 4px grid */
   --space-0-5: 2px;
@@ -68,6 +72,34 @@
   --font-ui: "Manrope", sans-serif;
   --font-code: "IBM Plex Mono", monospace;
   --font-display: "Inter", sans-serif;
+}
+
+/* --- Dark theme: semantic tokens only, remapped onto primitives ---
+   Add class="dark" to <html> to enable.
+
+   Must stay after the :root blocks — `.dark` and `:root` have identical
+   specificity (0,1,0), so source order is what decides the winner.
+
+   --bg-primary is gray-850 rather than gray-900 on purpose: Button.jsx pins
+   bg-gray-900 / hover:bg-gray-800 through Tailwind, and primitives don't shift
+   between themes. A gray-900 card would render the button its own colour and
+   make it vanish; gray-850 keeps it legible in both states. */
+.dark {
+  /* text */
+  --text-primary: var(--gray-50);
+  --text-secondary: var(--gray-500);
+  --text-tertiary: var(--gray-600);
+  --text-on-pink: var(--pink-300);
+
+  /* accent */
+  --accent-primary: var(--pink-300);
+
+  /* surfaces */
+  --bg-page: var(--gray-900);
+  --bg-primary: var(--gray-850);
+  --button-bg-hover: var(--gray-800);
+  --accent-info-pink: var(--pink-950);
+  --border-subtle: var(--gray-800);
 }
 
 /* ============================================
