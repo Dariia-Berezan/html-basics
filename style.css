@@ -255,6 +255,12 @@ main {
   border-radius: 8px;
 }
 
+.price {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-tertiary);
+}
+
 .due-date {
   font-size: 12px;
   line-height: 18px;
