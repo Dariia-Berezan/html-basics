@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Chip from "./Chip.jsx";
+import Button from "./Button.jsx";
 
 /* Code snippets are stored as token data rather than inline JSX: JSX strips the
    indentation from multi-line text, which would flatten the `white-space: pre`
@@ -136,6 +137,7 @@ export default function LessonCard({
               which the browser shapes separately and lays out ~0.01px differently. */}
           <span className="due-date">{`Due Date: ${dueDate}`}</span>
         </div>
+        <Button>Start lesson</Button>
       </div>
     </article>
   );
