@@ -215,6 +215,7 @@ main {
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  flex: 1;
 }
 
 /* --- info --- */
@@ -244,6 +245,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 .chip {
