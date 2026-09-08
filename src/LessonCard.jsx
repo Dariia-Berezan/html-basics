@@ -122,7 +122,10 @@ export default function LessonCard({ title, description, chip, dueDate, variant 
         </div>
         <div className="card-meta">
           <span className="chip">{chip}</span>
-          <span className="due-date">Due Date: {dueDate}</span>
+          {/* Template literal keeps this a single text node, matching the original
+              markup exactly — `Due Date: {dueDate}` would emit two adjacent nodes,
+              which the browser shapes separately and lays out ~0.01px differently. */}
+          <span className="due-date">{`Due Date: ${dueDate}`}</span>
         </div>
       </div>
     </article>
