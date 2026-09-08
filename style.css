@@ -79,6 +79,10 @@ main {
   box-shadow: var(--card-shadow-hover);
 }
 
+.card.is-done {
+  opacity: 0.6;
+}
+
 /* --- cover --- */
 .card-cover {
   position: relative;

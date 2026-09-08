@@ -120,9 +120,10 @@ export default function LessonCard({
   dueDate,
   variant,
   price = "Free",
+  isDone = false,
 }) {
   return (
-    <article className="card">
+    <article className={isDone ? "card is-done" : "card"}>
       <CardCover variant={variant} />
       <div className="card-content">
         <div className="card-info">
@@ -130,7 +131,7 @@ export default function LessonCard({
           <p className="card-description">{description}</p>
         </div>
         <div className="card-meta">
-          <Chip label={chip} />
+          <Chip label={isDone ? "Done" : chip} />
           <span className="price">{price}</span>
           {/* Template literal keeps this a single text node, matching the original
               markup exactly — `Due Date: {dueDate}` would emit two adjacent nodes,

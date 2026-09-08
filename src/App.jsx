@@ -6,6 +6,7 @@ export default function App() {
       <section className="lessons" aria-label="Lessons">
         <LessonCard
           variant="html"
+          isDone
           title="HTML Basics"
           description="Learn the building blocks of the web with HTML. This lesson covers elements, attributes, and how to structure a webpage from scratch."
           chip="Code"
